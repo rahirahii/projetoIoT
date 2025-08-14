@@ -1,7 +1,7 @@
 <?php
 
+use App\Livewire\AmbienteCreate;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//crud- ambiente
+Route::get('/ambiente/create', AmbienteCreate::class);
