@@ -25,21 +25,21 @@
 
                             <div class="mb-3">
                                 <label for="descricao" class="form-label">Descrição</label>
-                                <input type="text" class="form-control" id="descricao" name= "descricao" placeholder="Descrição"
-                                    wire:model.defer="descricao"
+                                <input type="text" class="form-control" id="descricao" name= "descricao"
+                                    placeholder="Descrição" wire:model.defer="descricao"
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
                             </div>
 
                             <div class="mb-3">
                                 <label for="status" class="form-label">Status</label>
-                                <select class="form-select" id="status" name= "status" 
-                                    wire:model.defer="status"
+                                <select class="form-select" id="status" name= "status" wire:model.defer="status"
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
+                                </select>
                             </div>
 
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
-                            </div>
+                        <div>
+                                <button type="submit" class="btn btn-primary w-100" style=" border-radius: 100px; color:#fff ">Cadastrar</button>
+                        </div> 
                         </form>
                     </div>
                 </div>
