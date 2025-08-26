@@ -26,13 +26,17 @@
                             <div class="mb-3">
                                 <label for="status" class="form-label">Status</label>
                                 <select class="form-select" id="status" name= "status" wire:model.defer="status"
-                                    style="border-radius: 100px; background-color:#fffeed">
+                                    style="border-radius: 100px; border-inline-color: black; border-block-color:black">
                                     <option hidden>Selecione o status da sala</option>
 
-                                    <option value="Livre">Livre</option>
-                                    <option value="Ocupada">Ocupada</option>
+                                    <option value="Ativo">Ativo</option>
+                                    <option value="Desativado">Desativado</option>
                                     <select>
                             </div>
+                            @error('status')
+
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
 
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary">Cadastrar</button>
