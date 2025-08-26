@@ -29,14 +29,10 @@
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
                                     <option hidden>Selecione o status da sala</option>
 
-                                    <option value="Ativo">Ativo</option>
+                                    <option value="1">Ativo</option>
                                     <option value="Desativado">Desativado</option>
                                     <select>
                             </div>
-                            @error('status')
-
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
 
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary">Cadastrar</button>
