@@ -2,7 +2,7 @@
     <div class="container mt-5">
         <div class="row mb-3">
             <div class="col-md-6">
-                <input type="text" wire:model.lazy="search" class="form-control" placeholder="Buscar Ambiente...">
+                <input type="text" wire:model.lazy="search" class="form-control" placeholder="Buscar Sensor...">
             </div>
             <div class="col-md-3">
                 <select wire:model.live="perPage" class="form-select">
@@ -23,17 +23,21 @@
             <table class="table table-hover">
                 <thead class="table-light">
                     <th>ID</th>
-                    <th>Nome</th>
+                    <th>Ambiente ID</th>
+                    <th>Código</th>
+                    <th>Tipo</th>
                     <th>Descrição</th>
                     <th>Status</th>
                 </thead>
                 <tbody>
-                    @foreach ($ambientes as $a)
+                    @foreach ($sensores as $s)
                         <tr>
-                            <td>{{ $a->id }}</td>
-                            <td>{{ $a->nome }}</td>
-                            <td>{{ $a->descricao }}</td>
-                            <td>{{ $a->status }}</td>
+                            <td>{{ $s->id }}</td>
+                            <td>{{ $s->ambiente->id }}</td>
+                            <td>{{ $s->codigo }}</td>
+                            <td>{{ $s->tipo }}</td>
+                            <td>{{ $s->descricao }}</td>
+                            <td>{{ $s->status }}</td>
                         </tr>
                     @endforeach
                 </tbody>
