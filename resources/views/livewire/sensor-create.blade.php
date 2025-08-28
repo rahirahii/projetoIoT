@@ -11,8 +11,8 @@
                         <form wire:submit.prevent="store">
                             <div class="mb-3">
                                 <label for="codigo" class="form-label">Codigo do sensor</label>
-                                <input type="text" class="form-control" id="sensor" name="sensor"
-                                    placeholder="Código do sensor" wire:model.defer="sensor"
+                                <input type="text" class="form-control" id="codigo" name="codigo"
+                                    placeholder="Código do sensor" wire:model.defer="codigo"
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
                             </div>
 
@@ -30,7 +30,7 @@
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
                             </div>
 
-                           <div class="mb-3">
+                            <div class="mb-3">
                                 <label for="status" class="form-label">Status</label>
                                 <select class="form-select" id="status" name= "status" wire:model.defer="status"
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
@@ -40,10 +40,24 @@
                                     <option value="0">Desativado</option>
                                     <select>
                             </div>
+                            <div class="mb-3">
+                                <label for="ambiente_id" class="form-label">Ambiente</label>
+                                <select class="form-select" id="ambiente_id" wire:model.defer="ambiente_id"
+                                    style="border-radius: 100px; border-inline-color: black; border-block-color:black">
+                                    <option hidden>Selecione o ambiente</option>
+                                    @foreach ($ambientes as $a)
+                                        <option value={{ $a->id }}>{{ $a->nome }}></option>
+                                    @endforeach
+                                </select>
+                                @error('ambiente_id')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
 
-                        <div>
-                                <button type="submit" class="btn btn-primary w-100" style=" border-radius: 100px; color:#fff ">Cadastrar</button>
-                        </div> 
+                            <div>
+                                <button type="submit" class="btn btn-primary w-100"
+                                    style=" border-radius: 100px; color:#fff ">Cadastrar</button>
+                            </div>
                         </form>
                     </div>
                 </div>

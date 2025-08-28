@@ -33,17 +33,17 @@ class SensorCreate extends Component
 
     public function store()
     {
+        if ($this->ambiente_id == null) {
+            Session()->flash('error', 'Não foi possivel encontrar o Id');
+        }
         $this->validate();
-        $ambiente = Ambiente::create([
-            'ambiente_id' => $this->ambiente_id
-        ]);
 
         Sensor::create([
-            'codigo' => $this->nome,
+            'ambiente_id' => $this->ambiente_id,
+            'codigo' => $this->codigo,
             'tipo' => $this->tipo,
-            'descricao' => $this->tipo,
+            'descricao' => $this->descricao,
             'status' => $this->status,
-            'ambiente_id' => $ambiente->id
         ]);
 
         session()->flash('success  ', 'Cadastro de Sensor realizado com sucesso');
@@ -52,6 +52,7 @@ class SensorCreate extends Component
 
     public function render()
     {
+        $ambientes = Ambiente::all();
         return view('livewire.sensor-create');
     }
 }
