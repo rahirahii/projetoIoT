@@ -32,17 +32,10 @@
                 <tbody>
                     @foreach ($sensor as $s)
                         <tr>
-                            <td>{{ $s->id }}</td>
                             <td>{{ $s->codigo }}</td>
                             <td>{{ $s->tipo }}</td>
                             <td>{{ $s->descricao }}</td>
                             <td>{{ $s->status }}</td>
-
-
-                            <td>
-                                <a href="{{ route('sensor.edit', $ad->id) }}" class="btn btn-info btn-sm">
-                                    <i class="bi bi-person-fill-gear"></i> Editar</a>
-                            </td>
                         </tr>
                     @endforeach
                 </tbody>
