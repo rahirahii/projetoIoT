@@ -30,11 +30,15 @@
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
                             </div>
 
-                            <div class="mb-3">
+                           <div class="mb-3">
                                 <label for="status" class="form-label">Status</label>
                                 <select class="form-select" id="status" name= "status" wire:model.defer="status"
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
-                                </select>
+                                    <option hidden>Selecione o status do sensor</option>
+
+                                    <option value="1">Ativo</option>
+                                    <option value="0">Desativado</option>
+                                    <select>
                             </div>
 
                         <div>
