@@ -33,7 +33,7 @@
                             style="border-radius: 100px; border-inline-color: black; border-block-color:black">
                             <option hidden>Selecione o status da sala</option>
                             <option value="1">Ativo</option>
-                            <option value="Desativado">Desativado</option>
+                            <option value="0">Desativado</option>
                             <select>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">

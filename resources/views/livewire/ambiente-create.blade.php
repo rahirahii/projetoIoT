@@ -36,7 +36,7 @@
                                     <option hidden>Selecione o status da sala</option>
 
                                     <option value="1">Ativo</option>
-                                    <option value="Desativado">Desativado</option>
+                                    <option value="0">Desativado</option>
                                     <select>
                             </div>
 
