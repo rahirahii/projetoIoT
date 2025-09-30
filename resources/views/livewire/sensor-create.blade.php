@@ -45,8 +45,8 @@
                                 <select class="form-select" id="ambiente_id" wire:model.defer="ambiente_id"
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
                                     <option hidden>Selecione o ambiente</option>
-                                    @foreach ($ambientes as $a)
-                                        <option value={{ $a->id }}>{{ $a->nome }}></option>
+                                    @foreach ($ambientes as $ambiente)
+                                        <option value={{ $ambiente->id }}>{{ $ambiente->nome }}></option>
                                     @endforeach
                                 </select>
                                 @error('ambiente_id')

@@ -53,6 +53,6 @@ class SensorCreate extends Component
     public function render()
     {
         $ambientes = Ambiente::all();
-        return view('livewire.sensor-create');
+        return view('livewire.sensor-create', compact('ambientes'));
     }
 }
