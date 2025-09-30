@@ -25,6 +25,7 @@
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Status</th>
+                    <th>Ações</th>
                 </thead>
                 <tbody>
                     @foreach ($ambientes as $a)
@@ -33,6 +34,18 @@
                             <td>{{ $a->nome }}</td>
                             <td>{{ $a->descricao }}</td>
                             <td>{{ $a->status }}</td>
+
+                            <td>
+                                <a href="{{ route('ambiente.edit', $a->id) }}"
+                                    class="btn btn-sm btn-warning">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <button wire:click="delete({{ $a->id }})"
+                                    class="btn btn-sm btn-danger" onclick="return
+                                    confirm('Tem certeza?')">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
