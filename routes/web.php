@@ -6,9 +6,9 @@ use App\Livewire\AmbienteList;
 use Illuminate\Support\Facades\Route;
 
 //CRUD - ambiente
-Route::get('/ambiente/create', AmbienteCreate::class);
-Route::get('/ambiente/list', AmbienteList::class);
-Route::get('/ambiente/edit/{id}', AmbienteEdit::class);
+Route::get('/ambiente/create', AmbienteCreate::class)->name('ambiente.create');
+Route::get('/ambiente/list', AmbienteList::class)->name('ambiente.list');
+Route::get('/ambiente/edit/{id}', AmbienteEdit::class)->name('ambiente.edit');
 
 use App\Livewire\Dashboard;
 
@@ -17,9 +17,6 @@ use App\Livewire\SensorEdit;
 use App\Livewire\SensorList;
 
 use App\Livewire\RegistroList;
-
-use Illuminate\Support\Facades\Route;
-
 
 Route::get('/', Dashboard::class);
 
@@ -31,4 +28,3 @@ Route::get('/sensor/{id}/edit/', SensorEdit::class);
 
 //LIST (Registros)
 Route::get('/registro/list', RegistroList::class);
-
