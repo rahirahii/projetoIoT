@@ -46,7 +46,7 @@ class SensorCreate extends Component
             'status' => $this->status,
         ]);
 
-        session()->flash('success  ', 'Cadastro de Sensor realizado com sucesso');
+        session()->flash('success', 'Cadastro de Sensor realizado com sucesso');
         return redirect()->route('sensor.list');
     }
 
