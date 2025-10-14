@@ -22,9 +22,9 @@ Route::get('/', Dashboard::class);
 
 
 //CRUD-sensores
-Route::get('/sensor/create', SensorCreate::class);
-Route::get('/sensor/list', SensorList::class);
-Route::get('/sensor/{id}/edit/', SensorEdit::class);
+Route::get('/sensor/create', SensorCreate::class)->name('sensor.create');
+Route::get('/sensor/list', SensorList::class)->name('sensor.list');
+Route::get('/sensor/{id}/edit/', SensorEdit::class)->name('sensor.edit');
 
 //LIST (Registros)
 Route::get('/registro/list', RegistroList::class);
