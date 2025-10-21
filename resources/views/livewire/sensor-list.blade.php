@@ -1,5 +1,10 @@
 <div>
     <div class="container mt-5">
+         @if (session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
         <div class="row mb-3">
             <div class="col-md-6">
                 <input type="text" wire:model.lazy="search" class="form-control" placeholder="Buscar Sensor...">
@@ -38,6 +43,10 @@
                             <td>{{ $s->tipo }}</td>
                             <td>{{ $s->descricao }}</td>
                             <td>{{ $s->status }}</td>
+                            <td><button wire:click="alternarStatus({{$s->id}})">
+                                {{$s->status ? 'Desligar':'Ligar'}}
+                                <i class="bi bi-power"></i>
+                            </button></td>
                         </tr>
                     @endforeach
                 </tbody>
