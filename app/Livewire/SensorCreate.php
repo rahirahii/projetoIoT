@@ -17,7 +17,7 @@ class SensorCreate extends Component
     protected $rules = [
         'codigo' => 'required|unique:sensors,codigo',
         'tipo' => 'required|min:3|max:10',
-        'descricao' => 'required|min:6|max:20'
+        'descricao' => 'min:6|max:20'
     ];
 
     protected $messages = [
@@ -26,7 +26,6 @@ class SensorCreate extends Component
         'tipo.required' => 'o campo tipo é obrigatório',
         'tipo.max' => 'o número máximo de caracteres é 10',
         'tipo.min' => 'o número minimo de caracteres é 3',
-        'descricao.required' => 'a descrição é obrigatória',
         'descricao.min' => 'o numero minímo de caracteres é 6',
         'descricao.max' => 'o numero máximo de caracteres é 20'
     ];

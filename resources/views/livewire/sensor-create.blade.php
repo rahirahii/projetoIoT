@@ -20,6 +20,9 @@
                                 <input type="text" class="form-control" id="codigo" name="codigo"
                                     placeholder="Código do sensor" wire:model.defer="codigo"
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
+                                @error('codigo')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="mb-3">
@@ -27,6 +30,9 @@
                                 <input type="text" class="form-control" id="tipo" name="tipo"
                                     placeholder="Tipo" wire:model.defer="tipo"
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
+                                @error('tipo')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="mb-3">
@@ -34,6 +40,9 @@
                                 <input type="text" class="form-control" id="descricao" name= "descricao"
                                     placeholder="Descrição" wire:model.defer="descricao"
                                     style="border-radius: 100px; border-inline-color: black; border-block-color:black">
+                                @error('descricao')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="mb-3">
@@ -45,6 +54,9 @@
                                     <option value="1">Ativo</option>
                                     <option value="0">Desativado</option>
                                     <select>
+                                        @error('status')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="ambiente_id" class="form-label">Ambiente</label>
