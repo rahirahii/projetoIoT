@@ -31,7 +31,8 @@
 
             <nav class="nav flex-column px-2">
                 <a href="#" class="nav-link"><i class="bi bi-speedometer2"></i> Dashboard</a>
-                <a href="#" class="nav-link"><i class="bi bi-building"></i> Ambientes</a>
+                <a href="{{route('ambiente.list')}}" class="nav-link"><i class="bi bi-building"></i> Ambientes</a>
+                <a href="{{route('sensor.list')}}" class="nav-link"><i class="bi bi-radar"></i>Sensor</a>
                 <a href="#" class="nav-link"><i class="bi bi-people"></i> Usuarios</a>
                 <a href="#" class="nav-link"><i class="bi bi-exclamation-triangle"></i> Alertas</a>
                 <a href="#" class="nav-link"><i class="bi bi-gear"></i> Configurações</a>
